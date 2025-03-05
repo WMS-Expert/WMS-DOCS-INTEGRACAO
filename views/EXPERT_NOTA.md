@@ -46,8 +46,8 @@ CREATE VIEW EXPERT_NOTA ("ID", "CODIGO", "CODFILIAL", "TIPO", "CARGA", "DATAEMIS
 **CARGA** : *O campo deve ser **VARCHAR(20)**, contendo o codigo da carga.****<font color="red"> - obrigartorio</font>***<br/>
 **DATAEMISSAO** : *O campo deve ser **DATE**, trazendo a data de geração.****<font color="red"> - obrigartorio</font>***<br/>
 **QUANTIDADE** : *O campo deve ser **NUMERIC(10,4)**, contendo a quantidade.****<font color="red"> - obrigartorio</font>***<br/>
-**NUMERONOTAFISCAL** : *O campo deve ser **VARCHAR(30)**, contendo o numero da nota fiscal.****<font color="red"> - obrigartorio</font>***<br/>
-**SERIE** : *O campo deve ser **VARCHAR(3)**, contendo o numero da nota fiscal.****<font color="red"> - obrigartorio</font>***<br/>
+**NUMERONOTAFISCAL** : *O campo deve ser **VARCHAR(50)**, contendo o numero da nota fiscal.****<font color="red"> - obrigartorio</font>***<br/>
+**SERIE** : *O campo deve ser **VARCHAR(50)**, contendo o numero da nota fiscal.****<font color="red"> - obrigartorio</font>***<br/>
 **QUANTIDADEVOLUME** : *O campo deve ser **NUMERIC(10,2)**, contendo a quantidade volume.****<font color="red"> - obrigartorio</font>***<br/>
 **VALTOTALPRODUTO** : *O campo deve ser **NUMERIC(12,2)**, contendo a valtotalproduto.****<font color="red"> - obrigartorio</font>***<br/>
 **VALTOTALNOTA** : *O campo deve ser **NUMERIC(12,2)**, contendo a valtotalnota.****<font color="red"> - obrigartorio</font>***<br/>
