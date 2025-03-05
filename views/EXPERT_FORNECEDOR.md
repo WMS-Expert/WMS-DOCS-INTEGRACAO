@@ -38,14 +38,14 @@ SELECT
   where pcclient.dtexclusao is null
 
 ```
-**CODIGO** : *O campo deve ser **VARCHAR(255)**, o mesmo e a chave primaria.****<font color="red"> - obrigartorio</font>***<br/>
-**NOME** : *O campo deve ser **VARCHAR(60)**, contendo o nome do fornecedor.****<font color="red"> - obrigartorio</font>***<br/>
-**NOMEFANTASIA** : *O campo deve ser **VARCHAR(60)**, contendo o nome fantasia do fornecedor.****<font color="red"> - obrigartorio</font>***<br/>
-**CPF** : *O campo deve ser **VARCHAR(18)**, contem o cpf.****<font color="red"> - obrigartorio</font>***<br/>
+**CODIGO** : *O campo deve ser **VARCHAR(30)**, o mesmo e a chave primaria.****<font color="red"> - obrigartorio</font>***<br/>
+**NOME** : *O campo deve ser **VARCHAR(100)**, contendo o nome do fornecedor.****<font color="red"> - obrigartorio</font>***<br/>
+**NOMEFANTASIA** : *O campo deve ser **VARCHAR(100)**, contendo o nome fantasia do fornecedor.****<font color="red"> - obrigartorio</font>***<br/>
+**CPF** : *O campo deve ser **VARCHAR(14)**, contem o cpf.****<font color="red"> - obrigartorio</font>***<br/>
 **IE** : *O campo deve ser **VARCHAR(10)**, contem o ie.*<br/>
 **ESTADO** : *O campo deve ser **VARCHAR(2)**, contem o estado.*<br/>
 **CODCIDADE** : *O campo deve ser **INTEIRO**, contem o codigo da cidade.*<br/>
-**BAIRRO** : *O campo deve ser **VARCHAR(40)**, contendo o bairro.*<br/>
-**ENDERECO** : *O campo deve ser **VARCHAR(40)**, contendo o endereço.*<br/>
-**NUMERO** : *O campo deve ser **VARCHAR(6)**, contendo o numero do endereço.*<br/>
-**TELEFONE** : *O campo deve ser **VARCHAR(13)**, contendo o telefone.*<br/>
+**BAIRRO** : *O campo deve ser **VARCHAR(100)**, contendo o bairro.*<br/>
+**ENDERECO** : *O campo deve ser **VARCHAR(150)**, contendo o endereço.*<br/>
+**NUMERO** : *O campo deve ser **VARCHAR(10)**, contendo o numero do endereço.*<br/>
+**TELEFONE** : *O campo deve ser **VARCHAR(12)**, contendo o telefone.*<br/>
