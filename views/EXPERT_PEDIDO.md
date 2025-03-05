@@ -5,7 +5,7 @@ Definição da view responsável pelo gerenciamento dos Pedidos no sistema.
 ## Código SQL
 
 ```sql
-CREATE VIEW EXPERT_PEDIDO ("ID", "CODIGO", "VENDEDOR", "TIPO", "DATAEMISSAO", "DATAIMPORTACAO", "CODIGOCLIENTE", "CODFILIAL", "TOTALPEDIDO", "QTDITENS", "ORDEMPEDIDO", "STATUS", "DTEXPORTACAO", "CODIGOREF", "OBS", "CODIGOCARREGAMENTO") AS 
+CREATE VIEW EXPERT_PEDIDO ("ID", "CODIGO", "VENDEDOR", "TIPO", "DATAEMISSAO", "DATAIMPORTACAO", "CODIGOCLIENTE", "CODFILIAL", "TOTALPEDIDO", "QTDITENS", "ORDEMPEDIDO", "STATUS", "DTEXPORTACAO", "CODIGOREF", "OBS", "CODIGOCARREGAMENTO", "DESCRICAOCONSUMIDOR") AS 
   SELECT 
   	ROWNUM AS id,
     CAST(pcpedc.numped AS varchar(30)) codigo,
@@ -30,7 +30,8 @@ CREATE VIEW EXPERT_PEDIDO ("ID", "CODIGO", "VENDEDOR", "TIPO", "DATAEMISSAO", "D
     	WHEN (pcpedc.OBS1 IS NOT NULL ) AND (pcpedc.OBS IS NULL OR pcpedc.OBS = '') AND (pcpedc.OBS2 IS NULL OR pcpedc.OBS2 = '') THEN 'OBS02 - ' || pcpedc.OBS1
     	WHEN (pcpedc.OBS1 IS NULL OR pcpedc.OBS1 = '') AND (pcpedc.OBS IS NULL OR pcpedc.OBS = '') AND (pcpedc.OBS2 IS NOT NULL ) THEN 'OBS03 - ' || pcpedc.OBS2
     ELSE 'OBS01 - ' || pcpedc.OBS || ' | OBS2 - ' || pcpedc.OBS1 || ' | OBS3 - ' || pcpedc.OBS2 END AS OBS,
-    CAST(pcpedc.numcar AS VARCHAR(30)) AS codigocarregamento
+    CAST(pcpedc.numcar AS VARCHAR(30)) AS codigocarregamento,
+    PCCLIENT.CLIENT as descricaoconsumidor
   from pcpedc
   left join PCCLIENT on PCCLIENT.codcli = pcpedc.CODCLI
   left join PCPRACA on PCPRACA.codpraca = PCCLIENT.codpraca
@@ -59,4 +60,6 @@ CREATE VIEW EXPERT_PEDIDO ("ID", "CODIGO", "VENDEDOR", "TIPO", "DATAEMISSAO", "D
 **DTEXPORTACAO** : *O campo deve ser **DATE**, trazendo a data de exportação.*<br/>
 **CODIGOREF** : *O campo deve ser **VARCHAR(30)**, contendo o codigoref.*<br/>
 **OBS** : *O campo deve ser **VARCHAR(30)**, contendo uma obs.*<br/>
-**CODIGOCARREGAMENTO** : *O campo deve ser **VARCHAR(30)**, contendo o codigo do carregamento.****<font color="red"> - obrigartorio</font>***<br/>
+**CODIGOCARREGAMENTO** : *O campo deve ser **VARCHAR(30)**, contendo o codigo do carregamento.****<font color="red"> - 
+obrigartorio</font>***<br/>
+**DESCRICAOCONSUMIDOR** : *O campo deve ser **VARCHAR(150)**, contendo o nome do consumidor.****
