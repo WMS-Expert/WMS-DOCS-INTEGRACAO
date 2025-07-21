@@ -1,6 +1,6 @@
 # View EXPERT_FORNECEDOR
 
-Definição da view responsável pelo gerenciamento dos -- no sistema.  
+Definição da view responsável pelo gerenciamento dos fornecedores no sistema.  
 
 ## Código SQL
 
@@ -74,6 +74,8 @@ Exemplo de json:
 }
 
 ```
+
+
 | Campo            | Tipo           | Descrição                                            |
 | ---------------- | -------------- | ---------------------------------------------------- |
 | **CODIGO**       | `VARCHAR(30)`  | Código do fornecedor.🔴 **Obrigatório**.             |
