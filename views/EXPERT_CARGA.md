@@ -7,20 +7,29 @@ Definição da view responsável pelo gerenciamento de cargas no sistema.
 ```sql
 CREATE VIEW EXPERT_CARGA (
   "CODIGOCARGA",
-  "NOMECARGA",
-  "DATAGERACAO",
-  "CODIGOFILIAL"
+  "CODIGOFILIAL",
+  "DATAINICIOCONF",
+  "DATAFIMCONF",
+  "DATAEXPORTACAOERP",
+  "QTDVOLUMES"
 ) AS 
   SELECT 
     CAST(PCBONUSC.NUMBONUS AS VARCHAR(20)) codigocarga,
-    NULL AS nomecarga,
-    CAST (PCBONUSC.DATABONUS AS TIMESTAMP) datageracao,
-    CAST(PCBONUSC.CODFILIAL AS VARCHAR(20)) codigofilial
+    CAST(PCBONUSC.CODFILIAL AS VARCHAR(20)) codigofilial,
+    CAST(PCBONUSC.DATAINICIO AS TIMESTAMP) datainicioconf,
+    CAST(PCBONUSC.DATAFIM AS TIMESTAMP) datafimconf,
+    CAST(PCBONUSC.DATABONUS AS TIMESTAMP) dataexportacaoerp,
+    CAST(0 AS integer) qtdvolumes
   FROM PCBONUSC  
   WHERE pcbonusc.DATABONUS >= TO_DATE('01/10/2024', 'dd/mm/yyyy');
 ```
 
-**CODIGOCARGA** : *O campo deve ser **VARCHAR(20)**, o mesmo e a chave primaria.****<font color="red"> - obrigartorio</font>*** <br/>
-**NOMECARGA** : *O campo deve ser **VARCHAR(100)**, contendo o nome da carga.****<font color="red"> - obrigartorio</font>***<br/>
-**CODIGOFILIAL** : *O campo deve ser **VARCHAR(20)**, contem o codigo da filial do cliente, sendo um campo.* ***<font color="red"> - obrigartorio</font>***<br/>
-**DATAGERACAO** : *O campo deve ser **DATE**, trazendo a data de geração da carga.* <br/>
+| Campo                 | Tipo          | Descrição                                                                                   |
+| --------------------- | ------------- | ------------------------------------------------------------------------------------------- |
+| **CODIGOCARGA**       | `VARCHAR(20)` | Código identificador da carga (proveniente de `NUMBONUS`). <br/>🔴 **Obrigatório**.         |
+| **CODIGOFILIAL**      | `VARCHAR(20)` | Código da filial da carga (proveniente de `CODFILIAL`). <br/>🔴 **Obrigatório**.            |
+| **DATAINICIOCONF**    | `TIMESTAMP`   | Data e hora de início da conferência da carga (proveniente de `DATAINICIO`).                |
+| **DATAFIMCONF**       | `TIMESTAMP`   | Data e hora de fim da conferência da carga (proveniente de `DATAFIM`).                      |
+| **DATAEXPORTACAOERP** | `TIMESTAMP`   | Data de exportação para o ERP (proveniente de `DATABONUS`).                                 |
+| **QTDVOLUMES**        | `INTEGER`     | Quantidade de volumes. Neste momento, é retornado sempre como `0`. <br/>🔴 **Obrigatório**. |
+
