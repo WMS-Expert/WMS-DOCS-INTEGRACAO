@@ -41,10 +41,10 @@ Json de exemplo:
 
 | Campo                 | Tipo          | Descrição                                                                                   |
 | --------------------- | ------------- | ------------------------------------------------------------------------------------------- |
-| **CODIGOCARGA**       | `VARCHAR(20)` | Código identificador da carga (proveniente de `NUMBONUS`). <br/>🔴 **Obrigatório**.         |
-| **CODIGOFILIAL**      | `VARCHAR(20)` | Código da filial da carga (proveniente de `CODFILIAL`). <br/>🔴 **Obrigatório**.            |
-| **DATAINICIOCONF**    | `TIMESTAMP`   | Data e hora de início da conferência da carga (proveniente de `DATAINICIO`).                |
-| **DATAFIMCONF**       | `TIMESTAMP`   | Data e hora de fim da conferência da carga (proveniente de `DATAFIM`).                      |
-| **DATAEXPORTACAOERP** | `TIMESTAMP`   | Data de exportação para o ERP (proveniente de `DATABONUS`).                                 |
+| **CODIGOCARGA**       | `VARCHAR(20)` | Código identificador da carga. <br/>🔴 **Obrigatório**.         |
+| **CODIGOFILIAL**      | `VARCHAR(20)` | Código da filial da carga. <br/>🔴 **Obrigatório**.            |
+| **DATAINICIOCONF**    | `TIMESTAMP`   | Data e hora de início da conferência da carga.                |
+| **DATAFIMCONF**       | `TIMESTAMP`   | Data e hora de fim da conferência da carga.                      |
+| **DATAEXPORTACAOERP** | `TIMESTAMP`   | Data de exportação para o ERP.                                 |
 | **QTDVOLUMES**        | `INTEGER`     | Quantidade de volumes. Neste momento, é retornado sempre como `0`. <br/>🔴 **Obrigatório**. |
 
