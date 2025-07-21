@@ -52,19 +52,20 @@ Exemplo de json:
 }
 
 ```
-| Campo            | Tipo           | Descrição                                                                 |
-| ---------------- | -------------- | ------------------------------------------------------------------------- |
-| **CODIGO**       | `VARCHAR(255)` | Código do carregamento (proveniente de `NUMCAR`).<br/>🔴 **Obrigatório**. |
-| **MOTORISTA**    | `VARCHAR(100)` | Nome do motorista (atualmente `NULL`).                                    |
-| **AJUDANTE1**    | `VARCHAR(100)` | Código ou nome do ajudante 1 (de `CODFUNCAJUD`).                          |
-| **AJUDANTE2**    | `VARCHAR(100)` | Código ou nome do ajudante 2 (de `CODFUNCAJUD2`).                         |
-| **AJUDANTE3**    | `VARCHAR(100)` | Código ou nome do ajudante 3 (de `CODFUNCAJUD3`).                         |
-| **DATAGERACAO**  | `DATE`         | Data de geração do carregamento (de `DATAMON`).<br/>🔴 **Obrigatório**.   |
-| **DATASAIDA**    | `DATE`         | Data de saída do carregamento (de `DTSAIDA`).                             |
-| **DATACHEGADA**  | `DATE`         | Data de chegada do carregamento (atualmente `NULL`).                      |
-| **DESTINO**      | `VARCHAR(20)`  | Código do destino do carregamento (de `DESTINO`).                         |
-| **KMINICIAL**    | `VARCHAR(10)`  | Quilometragem inicial do carregamento (de `KMINICIAL`).                   |
-| **KMFIM**        | `VARCHAR(10)`  | Quilometragem final do carregamento (de `KMFINAL`).                       |
-| **CODFILIAL**    | `VARCHAR(30)`  | Código da filial (de `PCPEDC.CODFILIAL`).<br/>🔴 **Obrigatório**.         |
-| **CODIGOPEDIDO** | `VARCHAR(30)`  | Código do pedido associado (de `NUMPED`).<br/>🔴 **Obrigatório**.         |
+| Campo            | Tipo           | Descrição                                                |
+| ---------------- | -------------- | -------------------------------------------------------- |
+| **CODIGO**       | `VARCHAR(255)` | Código do carregamento.🔴 **Obrigatório**.          |
+| **MOTORISTA**    | `VARCHAR(100)` | Nome do motorista (atualmente `NULL`).                   |
+| **AJUDANTE1**    | `VARCHAR(100)` | Código ou nome do ajudante 1.                            |
+| **AJUDANTE2**    | `VARCHAR(100)` | Código ou nome do ajudante 2.                            |
+| **AJUDANTE3**    | `VARCHAR(100)` | Código ou nome do ajudante 3.                            |
+| **DATAGERACAO**  | `DATE`         | Data de geração do carregamento.🔴 **Obrigatório**. |
+| **DATASAIDA**    | `DATE`         | Data de saída do carregamento.                           |
+| **DATACHEGADA**  | `DATE`         | Data de chegada do carregamento (atualmente `NULL`).     |
+| **DESTINO**      | `VARCHAR(20)`  | Destino do carregamento.                                 |
+| **KMINICIAL**    | `VARCHAR(10)`  | Quilometragem inicial.                                   |
+| **KMFIM**        | `VARCHAR(10)`  | Quilometragem final.                                     |
+| **CODFILIAL**    | `VARCHAR(30)`  | Código da filial.🔴 **Obrigatório**.                |
+| **CODIGOPEDIDO** | `VARCHAR(30)`  | Código do pedido associado.🔴 **Obrigatório**.      |
+
 
