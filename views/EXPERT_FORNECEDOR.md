@@ -3,49 +3,86 @@ Definição da view responsável pelo gerenciamento dos -- no sistema.
 ## Código SQL
 
 ```sql
-CREATE VIEW EXPERT_FORNECEDOR ("CODIGO", "NOME", "NOMEFANTASIA", "CPF", "IE", "ESTADO", "CODCIDADE", "BAIRRO", "ENDERECO", "NUMERO", "TELEFONE") AS 
+CREATE VIEW EXPERT_FORNECEDOR (
+  "CODIGO",
+  "NOME",
+  "NOMEFANTASIA",
+  "CPF",
+  "IE",
+  "ESTADO",
+  "CODCIDADE",
+  "BAIRRO",
+  "ENDERECO",
+  "NUMERO",
+  "TELEFONE"
+) AS 
   SELECT
-   CAST (pcfornec.codfornec AS VARCHAR(255)) codigo,
-   pcfornec.fornecedor nome,
-   pcfornec.fantasia nomefantasia,
-   pcfornec.cgc cpf,
-   pcfornec.IE ie,
-   pcfornec.estado estado,
-   NULL codcidade,
-   pcfornec.bairro bairro,
-   pcfornec.ender endereco,
-   null numero,
-   NULL telefone
-  from pcfornec
+    CAST(pcfornec.codfornec AS VARCHAR(255)) codigo,
+    pcfornec.fornecedor nome,
+    pcfornec.fantasia nomefantasia,
+    pcfornec.cgc cpf,
+    pcfornec.IE ie,
+    pcfornec.estado estado,
+    NULL codcidade,
+    pcfornec.bairro bairro,
+    pcfornec.ender endereco,
+    NULL numero,
+    NULL telefone
+  FROM pcfornec
   WHERE pcfornec.dtexclusao IS NULL
+
 UNION
-SELECT
-    CAST (to_number('900' || to_char(pcclient.codcli)) AS varchar(255))codigo,
+
+  SELECT
+    CAST(TO_NUMBER('900' || TO_CHAR(pcclient.codcli)) AS VARCHAR(255)) codigo,
     pcclient.cliente nome,
-    pcclient.FANTASIA nomefantasia,
+    pcclient.fantasia nomefantasia,
     pcclient.cgcent cpf,
-    pcclient.IEENT ie ,
+    pcclient.IEENT ie,
     pccidade.UF estado,
     pcclient.codmunicipio codcidade,
     pcclient.bairroent bairro,
     pcclient.enderent endereco,
-    pcclient.NUMEROENT numero,
-    pcclient.TELCOB telefone
+    pcclient.numeroent numero,
+    pcclient.telcob telefone
   FROM pcclient
-  left join pcpraca on pcpraca.codpraca = pcclient.codpraca
-  left join PCROTAEXP on PCROTAEXP.codrota = pcpraca.rota
-  LEFT JOIN PCCIDADE ON pcclient.CODCIDADE = PCCIDADE.CODCIDADE
-  where pcclient.dtexclusao is null
+  LEFT JOIN pcpraca ON pcpraca.codpraca = pcclient.codpraca
+  LEFT JOIN PCROTAEXP ON PCROTAEXP.codrota = pcpraca.rota
+  LEFT JOIN PCCIDADE ON pcclient.codcidade = PCCIDADE.codcidade
+  WHERE pcclient.dtexclusao IS NULL;
+
 
 ```
-**CODIGO** : *O campo deve ser **VARCHAR(30)**, o mesmo e a chave primaria.****<font color="red"> - obrigartorio</font>***<br/>
-**NOME** : *O campo deve ser **VARCHAR(100)**, contendo o nome do fornecedor.****<font color="red"> - obrigartorio</font>***<br/>
-**NOMEFANTASIA** : *O campo deve ser **VARCHAR(100)**, contendo o nome fantasia do fornecedor.****<font color="red"> - obrigartorio</font>***<br/>
-**CPF** : *O campo deve ser **VARCHAR(14)**, contem o cpf.****<font color="red"> - obrigartorio</font>***<br/>
-**IE** : *O campo deve ser **VARCHAR(10)**, contem o ie.*<br/>
-**ESTADO** : *O campo deve ser **VARCHAR(2)**, contem o estado.*<br/>
-**CODCIDADE** : *O campo deve ser **INTEIRO**, contem o codigo da cidade.*<br/>
-**BAIRRO** : *O campo deve ser **VARCHAR(100)**, contendo o bairro.*<br/>
-**ENDERECO** : *O campo deve ser **VARCHAR(150)**, contendo o endereço.*<br/>
-**NUMERO** : *O campo deve ser **VARCHAR(10)**, contendo o numero do endereço.*<br/>
-**TELEFONE** : *O campo deve ser **VARCHAR(12)**, contendo o telefone.*<br/>
+
+Exemplo de json:
+
+```json
+{
+  "CODIGO": "900123",
+  "NOME": "Fornecedor Exemplo LTDA",
+  "NOMEFANTASIA": "Fornecedor XP",
+  "CPF": "12345678901234",
+  "IE": "1234567890",
+  "ESTADO": "SP",
+  "CODCIDADE": 3550308,
+  "BAIRRO": "Centro",
+  "ENDERECO": "Av. das Nações Unidas",
+  "NUMERO": "1500",
+  "TELEFONE": "11999998888"
+}
+
+```
+| Campo            | Tipo           | Descrição                                            |
+| ---------------- | -------------- | ---------------------------------------------------- |
+| **CODIGO**       | `VARCHAR(30)`  | Código do fornecedor.🔴 **Obrigatório**.             |
+| **NOME**         | `VARCHAR(100)` | Nome do fornecedor.🔴 **Obrigatório**.               |
+| **NOMEFANTASIA** | `VARCHAR(100)` | Nome fantasia do fornecedor.🔴 **Obrigatório**.      |
+| **CPF**          | `VARCHAR(14)`  | CPF ou CNPJ do fornecedor.🔴 **Obrigatório**.        |
+| **IE**           | `VARCHAR(10)`  | Inscrição estadual.                                  |
+| **ESTADO**       | `VARCHAR(2)`   | Unidade federativa (UF).                             |
+| **CODCIDADE**    | `INTEGER`      | Código da cidade.                                    |
+| **BAIRRO**       | `VARCHAR(100)` | Bairro do endereço.                                  |
+| **ENDERECO**     | `VARCHAR(150)` | Endereço do fornecedor.                              |
+| **NUMERO**       | `VARCHAR(10)`  | Número do endereço.                                  |
+| **TELEFONE**     | `VARCHAR(12)`  | Telefone de contato.                                 |
+
