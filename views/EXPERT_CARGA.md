@@ -24,6 +24,7 @@ CREATE VIEW EXPERT_CARGA (
   WHERE pcbonusc.DATABONUS >= TO_DATE('01/10/2024', 'dd/mm/yyyy');
 ```
 
+Json de exemplo:
 
 ```json
 {
