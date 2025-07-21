@@ -46,5 +46,5 @@ Json de exemplo:
 | **DATAINICIOCONF**    | `TIMESTAMP`   | Data e hora de início da conferência da carga.                |
 | **DATAFIMCONF**       | `TIMESTAMP`   | Data e hora de fim da conferência da carga.                      |
 | **DATAEXPORTACAOERP** | `TIMESTAMP`   | Data de exportação para o ERP.                                 |
-| **QTDVOLUMES**        | `INTEGER`     | Quantidade de volumes. Neste momento, é retornado sempre como `0`. 🔴 **Obrigatório**. |
+| **QTDVOLUMES**        | `INTEGER`     | Quantidade de volumes. 🔴 **Obrigatório**. |
 
