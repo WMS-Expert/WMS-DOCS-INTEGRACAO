@@ -55,7 +55,7 @@ Exemplo de json:
 | Campo            | Tipo           | Descrição                                                |
 | ---------------- | -------------- | -------------------------------------------------------- |
 | **CODIGO**       | `VARCHAR(255)` | Código do carregamento.🔴 **Obrigatório**.          |
-| **MOTORISTA**    | `VARCHAR(100)` | Nome do motorista (atualmente `NULL`).                   |
+| **MOTORISTA**    | `VARCHAR(100)` | Nome do motorista.                   |
 | **AJUDANTE1**    | `VARCHAR(100)` | Código ou nome do ajudante 1.                            |
 | **AJUDANTE2**    | `VARCHAR(100)` | Código ou nome do ajudante 2.                            |
 | **AJUDANTE3**    | `VARCHAR(100)` | Código ou nome do ajudante 3.                            |
