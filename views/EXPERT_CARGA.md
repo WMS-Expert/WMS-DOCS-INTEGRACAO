@@ -24,6 +24,20 @@ CREATE VIEW EXPERT_CARGA (
   WHERE pcbonusc.DATABONUS >= TO_DATE('01/10/2024', 'dd/mm/yyyy');
 ```
 
+
+```json
+{
+  "CODIGOCARGA": "123456",
+  "CODIGOFILIAL": "01",
+  "DATAINICIOCONF": "2024-10-05T08:00:00",
+  "DATAFIMCONF": "2024-10-05T10:30:00",
+  "DATAEXPORTACAOERP": "2024-10-06T00:00:00",
+  "QTDVOLUMES": 0
+}
+```
+
+
+
 | Campo                 | Tipo          | Descrição                                                                                   |
 | --------------------- | ------------- | ------------------------------------------------------------------------------------------- |
 | **CODIGOCARGA**       | `VARCHAR(20)` | Código identificador da carga (proveniente de `NUMBONUS`). <br/>🔴 **Obrigatório**.         |
