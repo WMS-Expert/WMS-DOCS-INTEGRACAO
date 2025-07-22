@@ -1,6 +1,7 @@
 # View EXPERT_CARGA
 
 Definição da view responsável pelo gerenciamento de cargas no sistema.  
+View responsável por representar os dados de cargas.  Filtra os registros e converte os campos relevantes para os tipos utilizados pela integração.
 
 ## Código SQL
 
