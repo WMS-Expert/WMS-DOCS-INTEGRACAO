@@ -4,6 +4,14 @@
 
 As views descritas neste documento são utilizadas para integração entre o sistema ERP e o WMS Expert. Todos os campos definidos nas views devem estar presentes, mesmo quando não obrigatórios. Campos obrigatórios devem sempre conter valores válidos; campos não obrigatórios podem conter NULL, mas nunca devem ser omitidos.
 
+Regras Gerais para Views
+
+- Todas as views devem conter todos os campos especificados nesta documentação.
+
+- Os campos obrigatórios devem sempre conter valores válidos (não nulos).
+
+- Os campos não obrigatórios podem retornar NULL, mas não devem ser omitidos da view.
+
 ### Views Documentadas:
 
 1. [EXPERT_CARGA](views/EXPERT_CARGA.md)
