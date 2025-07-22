@@ -24,7 +24,8 @@ As views descritas neste documento são utilizadas para integração entre o sis
 8. [EXPERT_NOTAITEM](views/EXPERT_NOTAITEM.md)  
 9. [EXPERT_PEDIDO](views/EXPERT_PEDIDO.md)  
 10. [EXPERT_PEDIDOSITEM](views/EXPERT_PEDIDOSITEM.md)  
-11. [EXPERT_PRODUTO](views/EXPERT_PRODUTO.md)  
+11. [EXPERT_PRODUTO](views/EXPERT_PRODUTO.md)
+12. [EXPERT_PEDIDO_CANCELADO](EXPERT_PEDIDO_CANCELADO.md)
 
 
 ### Observação:
