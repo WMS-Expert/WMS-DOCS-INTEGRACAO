@@ -64,6 +64,7 @@ WHERE (pcpedc.posicao = 'L' OR pcpedc.posicao = 'M')
 
 Exemplo de json:
 
+```json
 {
   "ID": 1,
   "CODIGO": "456789",
