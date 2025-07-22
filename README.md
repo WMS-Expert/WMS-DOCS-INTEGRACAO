@@ -6,7 +6,7 @@ As views descritas neste documento são utilizadas para integração entre o sis
 
 Views Documentadas
 
-1. View EXPERT_CLIENTE
+### 1. View EXPERT_CLIENTE
 
 (conteúdo omitido por já documentado anteriormente)
 
