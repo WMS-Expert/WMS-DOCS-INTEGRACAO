@@ -37,7 +37,7 @@ Permite a leitura direta de dados do ERP, garantindo uma implantação rápida e
 - Coleta e sincroniza dados diretamente do seu banco ERP.
 - Ideal para ambientes onde se deseja flexibilidade e agilidade na entrega.
 
-📘 Veja a [Documentação de Views](view.md)
+📘 Veja a [Documentação de Views](views.md)
 
 ### ⚙️ Integração via Stored Procedures
 
