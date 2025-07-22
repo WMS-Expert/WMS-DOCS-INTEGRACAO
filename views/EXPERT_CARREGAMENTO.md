@@ -1,6 +1,6 @@
 # View EXPERT_CARREGAMENTO
 
-Definição da view responsável pelo gerenciamento de Carregamento no sistema.  
+View responsável por representar os dados de carregamentos no sistema, integrando informações de pedidos e dados operacionais de carregamento.
 
 ## Código SQL
 
