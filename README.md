@@ -1,19 +1,59 @@
-# 📚 Documentação de Views para Integração com WMS Expert
+# Wms Expert - Sua parceira na jornada de migração para a Logística 4.0 🚀
 
-## Considerações Gerais
+Bem-vindo ao repositório oficial da **Wms Expert**, uma solução completa e personalizada para automação logística, desenhada para atender operações de todos os segmentos e tamanhos.  
 
-As views descritas neste documento são utilizadas para integração entre o sistema ERP e o WMS Expert. Todos os campos definidos nas views devem estar presentes, mesmo quando não obrigatórios. Campos obrigatórios devem sempre conter valores válidos; campos não obrigatórios podem conter NULL, mas nunca devem ser omitidos.
+Nosso software foi criado para transformar a sua logística, automatizando processos e proporcionando controle absoluto em todas as etapas da operação.  
 
-### Views Documentadas:
+---
 
-1. [EXPERT_CARGA](views/EXPERT_CARGA.md)
-2. [EXPERT_CARREGAMENTO](views/EXPERT_CARREGAMENTO.md)  
-3. [EXPERT_CLIENTE](views/EXPERT_CLIENTE.md)  
-4. [EXPERT_EMBALAGEM](views/EXPERT_EMBALAGEM.md)  
-5. [EXPERT_FORNECEDOR](views/EXPERT_FORNECEDOR.md)  
-6. [EXPERT_GRUPO](views/EXPERT_GRUPO.md)  
-7. [EXPERT_NOTA](views/EXPERT_NOTA.md)  
-8. [EXPERT_NOTAITEM](views/EXPERT_NOTAITEM.md)  
-9. [EXPERT_PEDIDO](views/EXPERT_PEDIDO.md)  
-10. [EXPERT_PEDIDOSITEM](views/EXPERT_PEDIDOSITEM.md)  
-11. [EXPERT_PRODUTO](views/EXPERT_PRODUTO.md)  
+## 🛠 Funcionalidades Principais
+
+- **Automatização de Processos Logísticos**  
+  Simplifique e otimize todas as etapas da logística, do recebimento à expedição, com rotinas personalizadas monitoradas por coletores de dados.  
+
+- **Controle Rigoroso de Estoque**  
+  Gerencie estoques por **lotes**, **validade** ou **números de série**, com um sistema de endereçamento completo que inclui:  
+  - Almoxarifados  
+  - Estações  
+  - Pulmões  
+  - Pickings  
+
+- **Gestão Moderna e Inteligente**  
+  Acompanhe o desempenho da sua operação em tempo real com **dashboards** que auxiliam na tomada de decisão.  
+
+- **Redução de Custos e Aumento da Produtividade**  
+  Nossa solução é focada em maximizar os resultados, reduzindo desperdícios e otimizando o desempenho da equipe.  
+
+---
+
+## 🔄 Integração com o ERP  
+
+O Wms Expert se adapta às necessidades do seu negócio, oferecendo duas formas de integração com seu ERP:  
+
+### Integração por meio de Views  
+Com esta abordagem, coletamos informações diretamente do seu ERP, permitindo que o Wms execute o controle do seu centro de distribuição com perfeição. Esta integração:  
+- É extremamente **rápida**  
+- Tem **maior facilidade de desenvolvimento**  
+
+#### Documentação de Views  
+Consulte a [Documentação de Views](view.md) para mais detalhes sobre esta integração.
+
+#### Documentação de Stored Procedure
+
+Consulte a [Documentação de Procedures](procedures.md) para mais detalhes sobre esta integração.
+
+
+---
+
+## 📈 Benefícios do Wms Expert  
+
+1. **Automação completa**: Libere sua equipe de tarefas manuais e reduza erros.  
+2. **Gestão de estoque precisa**: Minimize perdas e maximize o uso do seu inventário.  
+3. **Decisões baseadas em dados**: Use dashboards modernos para insights rápidos.  
+4. **Implementação ágil**: Integre rapidamente ao seu ERP sem complicações.  
+
+---
+
+**Wms Expert**  
+Sua parceira na transformação digital da logística.  
+
