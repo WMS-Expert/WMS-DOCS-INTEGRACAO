@@ -26,11 +26,11 @@ Exemplo de json:
   },
   {
     "codigopedido": "123456",
-    "codfilial": "02"
+    "codfilial": "01"
   },
   {
     "codigopedido": "789123",
-    "codfilial": "03"
+    "codfilial": "01"
   }
 ]
 
