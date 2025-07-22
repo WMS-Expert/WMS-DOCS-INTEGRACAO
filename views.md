@@ -25,3 +25,7 @@ As views descritas neste documento são utilizadas para integração entre o sis
 9. [EXPERT_PEDIDO](views/EXPERT_PEDIDO.md)  
 10. [EXPERT_PEDIDOSITEM](views/EXPERT_PEDIDOSITEM.md)  
 11. [EXPERT_PRODUTO](views/EXPERT_PRODUTO.md)  
+
+
+### Observação:
+As views demonstradas são apenas exemplo de aplicação, cada ERP tem que adaptar para entregar as views com os campos solicitados
