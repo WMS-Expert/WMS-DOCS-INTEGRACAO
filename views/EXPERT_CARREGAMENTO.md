@@ -64,7 +64,7 @@ Exemplo de json:
 | **DATACHEGADA**  | `DATE`         | Data de chegada do carregamento (atualmente `NULL`).     |
 | **DESTINO**      | `VARCHAR(20)`  | Destino do carregamento.                                 |
 | **KMINICIAL**    | `VARCHAR(10)`  | Quilometragem inicial.                                   |
-| **KMFIM**        | `VARCHAR(10)`  | Quilometragem final.                                     |
+| **KMFINAL**        | `VARCHAR(10)`  | Quilometragem final.                                     |
 | **CODFILIAL**    | `VARCHAR(30)`  | Código da filial.🔴 **Obrigatório**.                |
 | **CODIGOPEDIDO** | `VARCHAR(30)`  | Código do pedido associado.🔴 **Obrigatório**.      |
 
