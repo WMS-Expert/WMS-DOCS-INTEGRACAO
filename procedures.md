@@ -171,7 +171,7 @@ end
 #### Itens
 
 ```sql
-CREATE procedure [dbo].[sp_RetornoExpEntradaItem] 
+CREATE procedure [dbo].[sp_RetornoExpPedidoItem] 
 @codFiliaErp varchar(20), @codPedidoErp varchar(20), 
 @codProdutoErp varchar(20), @item varchar(5), 
 @qtdSeparada numeric(10,4), @qtdConferida numeric(10,4), 
