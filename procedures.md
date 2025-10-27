@@ -15,13 +15,13 @@ Após importar um movimento, o Wms notifica o ERP que o movimento foi recebido. 
 #### Movimentos de Entrada
 ```sql
 CREATE procedure [dbo].[sp_RetornoImpEntrada] 
-@codFiliaErp varchar(20), @codNotaFiscalErp varchar(20), 
+@codFilialErp varchar(20), @codNotaFiscalErp varchar(20), 
 @codFornecedorErp varchar(20), @serie int as
 
 begin
   update NOTAFISCALENTRADA SET WMS = 1 
   WHERE 
-    codFilialERP = @codFiliaErp and 
+    codFilialERP = @codFilialErp and 
     codNotaFiscalErp = @codNotaFiscalErp and 
     codFornecedorErp = @codFornecedorErp and
     serie = @serie
@@ -39,13 +39,13 @@ Quando um movimento é excluído, o Wms notifica o ERP que ele está novamente d
 #### Movimentos de Entrada
 ```sql
 CREATE procedure [dbo].[sp_RetornoLiberaEntrada] 
-@codFiliaErp varchar(20), @codNotaFiscalErp varchar(20), 
+@codFilialErp varchar(20), @codNotaFiscalErp varchar(20), 
 @codFornecedorErp varchar(20), @serie int as
 
 begin
   update NOTAFISCALENTRADA SET WMS = 0 
   WHERE 
-    codFilialERP = @codFiliaErp and 
+    codFilialERP = @codFilialErp and 
     codNotaFiscalErp = @codNotaFiscalErp and 
     codFornecedorErp = @codFornecedorErp and
     serie = @serie
@@ -70,7 +70,7 @@ CREATE procedure [dbo].[sp_RetornoExpEntrada]
 begin
   update NOTAFISCALENTRADA SET DataFimConferencia = @dataFimConferencia 
   WHERE 
-    codFilialERP = @codFiliaErp and 
+    codFilialERP = @codFilialErp and 
     codNotaFiscalErp = @codNotaFiscalErp and 
     codFornecedorErp = @codFornecedorErp and
     serie = @serie
@@ -81,7 +81,7 @@ end
 
 ```sql
 CREATE procedure [dbo].[sp_RetornoExpEntradaItem] 
-@codFiliaErp varchar(20), @codNotaFiscalErp varchar(20), 
+@codFilialErp varchar(20), @codNotaFiscalErp varchar(20), 
 @codFornecedorErp varchar(20), @serie int, @codProdutoErp varchar(20), 
 @qtdRecebida numeric(10,4), @codFuncConf varchar(20), @dtConferencia datetime as
 
@@ -89,7 +89,7 @@ Declare ItensEntrada Cursor for
   Select codProdutoErp, qtdRecebida, codFuncConf, dtConferencia
     from ItensNotaFiscalEntrada
    where 
-    codFiliaErp = @codFiliaErp and 
+    codFilialErp = @codFilialErp and 
     codNotaFiscalErp = @codNotaFiscalErp and 
     codFornecedorErp = @codFornecedorErp and 
     serie = @serie
@@ -119,7 +119,7 @@ CREATE procedure [dbo].[sp_RetornoImpPedido]
 begin
   update PEDIDO SET WMS = 1 
   WHERE 
-    codFilialERP = @codFiliaErp and 
+    codFilialERP = @codFilialErp and 
     codPedidoErp = @codPedidoErp
 end
 ```
@@ -138,7 +138,7 @@ CREATE procedure [dbo].[sp_RetornoLiberaPedido]
 begin
   update PEDIDO SET WMS = 0
   WHERE 
-    codFilialERP = @codFiliaErp and 
+    codFilialERP = @codFilialErp and 
     codPedidoErp = @codPedidoErp
 end
 
@@ -163,7 +163,7 @@ begin
     DataFimConferencia = @dataFimConferencia,
     DataFimSeparacao = @dataFimSeparacao 
   WHERE 
-    codFilialERP = @codFiliaErp and 
+    codFilialERP = @codFilialErp and 
     codPedidoErp = @codPedidoErp
 end
 
@@ -172,7 +172,7 @@ end
 
 ```sql
 CREATE procedure [dbo].[sp_RetornoExpPedidoItem] 
-@codFiliaErp varchar(20), @codPedidoErp varchar(20), 
+@codFilialErp varchar(20), @codPedidoErp varchar(20), 
 @codProdutoErp varchar(20), @item varchar(5), 
 @qtdSeparada numeric(10,4), @qtdConferida numeric(10,4), 
 @codFuncConf varchar(20), @codFuncSep varchar(20), 
@@ -183,7 +183,7 @@ Declare ItensPedido Cursor for
          codFuncSep, dtFimConferencia, dtFimSeparacao, item
     from ItensPedido
    where 
-    codFiliaErp = @codFiliaErp and 
+    codFilialErp = @codFilialErp and 
     codPedidoErp = @codPedidoErp
 Open ItensPedido
 fetch next from ItensPedido into @codProdutoErp, @qtdSeparada, 
