@@ -10,7 +10,7 @@ CREATE VIEW EXPERT_NOTAITEM (
   "CODIGONOTA",
   "ITEM",
   "CODIGOPRODUTO",
-  "CODIGOFILIAL",
+  "CODFILIALERP",
   "TIPO",
   "CODIGOFORNECEDOR",
   "QUANTIDADE",
@@ -66,7 +66,7 @@ Exemplo de json:
   "CODIGONOTA": "123456",
   "ITEM": 1,
   "CODIGOPRODUTO": "PROD001",
-  "CODIGOFILIAL": "01",
+  "CODFILIALERP": "01",
   "TIPO": 1,
   "CODIGOFORNECEDOR": "FORN001",
   "QUANTIDADE": 25.5,
@@ -87,7 +87,7 @@ Exemplo de json:
 | **CODIGONOTA**       | `VARCHAR(30)`   | Código da nota fiscal. <br/>🔴 **Obrigatório**.                                       |
 | **ITEM**             | `VARCHAR(50)`   | Sequência do item na nota. <br/>🔴 **Obrigatório**.                                   |
 | **CODIGOPRODUTO**    | `VARCHAR(30)`   | Código do produto. <br/>🔴 **Obrigatório**.                                           |
-| **CODIGOFILIAL**     | `VARCHAR(30)`   | Código da filial. <br/>🔴 **Obrigatório**.                                            |
+| **CODFILIALERP**     | `VARCHAR(30)`   | Código da filial. <br/>🔴 **Obrigatório**.                                            |
 | **TIPO**             | `INTEGER`       | Tipo da nota (1 = padrão, 2 = devolução, 3 = transferência). <br/>🔴 **Obrigatório**. |
 | **CODIGOFORNECEDOR** | `VARCHAR(30)`   | Código do fornecedor. <br/>🔴 **Obrigatório**.                                        |
 | **QUANTIDADE**       | `NUMERIC(10,4)` | Quantidade do item. <br/>🔴 **Obrigatório**.                                          |
