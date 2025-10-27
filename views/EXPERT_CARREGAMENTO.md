@@ -19,7 +19,7 @@ SELECT
   CAST(PCCARREG.DESTINO AS VARCHAR(20)) AS DESTINO,
   CAST(PCCARREG.KMINICIAL AS VARCHAR(10)) AS KMINICIAL,
   CAST(PCCARREG.KMFINAL AS VARCHAR(10)) AS KMFIM,
-  CAST(PCPEDC.codfilial AS VARCHAR(30)) AS CODFILIAL,
+  CAST(PCPEDC.codfilial AS VARCHAR(30)) AS CODFILIALERP,
   CAST(PCPEDC.NUMPED AS VARCHAR(30)) AS CODIGOPEDIDO
 FROM
   PCPEDC
@@ -47,7 +47,7 @@ Exemplo de json:
   "DESTINO": "FILIAL02",
   "KMINICIAL": "1000",
   "KMFIM": "1250",
-  "CODFILIAL": "1",
+  "CODFILIALERP": "1",
   "CODIGOPEDIDO": "PED789456"
 }
 
@@ -65,7 +65,7 @@ Exemplo de json:
 | **DESTINO**      | `VARCHAR(20)`  | Destino do carregamento.                                 |
 | **KMINICIAL**    | `VARCHAR(10)`  | Quilometragem inicial.                                   |
 | **KMFINAL**        | `VARCHAR(10)`  | Quilometragem final.                                     |
-| **CODFILIAL**    | `VARCHAR(30)`  | Código da filial.🔴 **Obrigatório**.                |
+| **CODFILIALERP**    | `VARCHAR(30)`  | Código da filial.🔴 **Obrigatório**.                |
 | **CODIGOPEDIDO** | `VARCHAR(30)`  | Código do pedido associado.🔴 **Obrigatório**.      |
 
 
