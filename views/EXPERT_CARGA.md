@@ -37,7 +37,7 @@ Json de exemplo:
 | Campo                 | Tipo          | Descrição                                                                                   |
 | --------------------- | ------------- | ------------------------------------------------------------------------------------------- |
 | **CODIGOCARGA**       | `VARCHAR(20)` | Código identificador da carga. 🔴 **Obrigatório**.         |
-| **CODIGOFILIAL**      | `VARCHAR(20)` | Código da filial da carga. 🔴 **Obrigatório**.            |
+| **CODFILIALERP**      | `VARCHAR(20)` | Código da filial da carga. 🔴 **Obrigatório**.            |
 | **NOME**    | `VARCHAR(100)`   | Nome da carga.
 | **DATAGERACAO**       | `DATE`   | Data de geração da carga. 🔴 **Obrigatório**.                    |
 
