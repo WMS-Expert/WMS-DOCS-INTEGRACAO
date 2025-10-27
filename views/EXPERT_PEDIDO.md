@@ -13,7 +13,7 @@ CREATE VIEW EXPERT_PEDIDO (
   "DATAEMISSAO",
   "DATAIMPORTACAO",
   "CODIGOCLIENTE",
-  "CODFILIAL",
+  "CODFILIALERP",
   "TOTALPEDIDO",
   "QTDITENS",
   "ORDEMPEDIDO",
@@ -73,7 +73,7 @@ Exemplo de json:
   "DATAEMISSAO": "2024-07-21",
   "DATAIMPORTACAO": "2024-07-21",
   "CODIGOCLIENTE": "12345",
-  "CODFILIAL": "1",
+  "CODFILIALERP": "1",
   "TOTALPEDIDO": 1250.75,
   "QTDITENS": 4,
   "ORDEMPEDIDO": 789,
@@ -97,7 +97,7 @@ Exemplo de json:
 | **DATAEMISSAO**         | `DATE`          | Data da emissão do pedido.                           |
 | **DATAIMPORTACAO**      | `DATE`          | Data de importação do pedido.                        |
 | **CODIGOCLIENTE**       | `VARCHAR(30)`   | Código do cliente. 🔴 **Obrigatório**.               |
-| **CODFILIAL**           | `VARCHAR(30)`   | Código da filial. 🔴 **Obrigatório**.                |
+| **CODFILIALERP**           | `VARCHAR(30)`   | Código da filial. 🔴 **Obrigatório**.                |
 | **TOTALPEDIDO**         | `NUMERIC(10,4)` | Valor total do pedido. 🔴 **Obrigatório**.           |
 | **QTDITENS**            | `INTEGER`       | Quantidade de itens no pedido.                       |
 | **ORDEMPEDIDO**         | `INTEGER`       | Número sequencial da montagem do pedido.             |
