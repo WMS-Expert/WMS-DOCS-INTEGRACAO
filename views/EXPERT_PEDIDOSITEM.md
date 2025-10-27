@@ -9,7 +9,7 @@ CREATE VIEW EXPERT_PEDIDOSITEM (
   "ID",
   "CODIGOPEDIDO",
   "ITEMPEDIDO",
-  "CODIGOFILIAL",
+  "CODFILIALERP",
   "CODIGOPRODUTO",
   "QUANTIDADE",
   "QTDSEPARADA",
@@ -42,7 +42,7 @@ Exemplo de json:
   "ID": 1,
   "CODIGOPEDIDO": "456789",
   "ITEMPEDIDO": "001",
-  "CODIGOFILIAL": "1",
+  "CODFILIALERP": "1",
   "CODIGOPRODUTO": "987654",
   "QUANTIDADE": 10.0000,
   "QTDSEPARADA": 0.0000,
@@ -57,7 +57,7 @@ Exemplo de json:
 | **ID**            | `INTEGER`       | Identificador da linha (gerado com `ROWNUM`). 🔴 **Obrigatório** |
 | **CODIGOPEDIDO**  | `VARCHAR(30)`   | Código do pedido ao qual o item pertence. 🔴 **Obrigatório**     |
 | **ITEMPEDIDO**    | `VARCHAR(50)`   | Sequencial do item no pedido. 🔴 **Obrigatório**                 |
-| **CODIGOFILIAL**  | `VARCHAR(30)`   | Código da filial de origem do pedido. 🔴 **Obrigatório**         |
+| **CODFILIALERP**  | `VARCHAR(30)`   | Código da filial de origem do pedido. 🔴 **Obrigatório**         |
 | **CODIGOPRODUTO** | `VARCHAR(30)`   | Código do produto. 🔴 **Obrigatório**                            |
 | **QUANTIDADE**    | `NUMERIC(10,4)` | Quantidade total solicitada do produto. 🔴 **Obrigatório**       |
 | **QTDSEPARADA**   | `NUMERIC(10,4)` | Quantidade separada.                                             |
