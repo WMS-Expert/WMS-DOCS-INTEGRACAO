@@ -8,7 +8,7 @@ Definição da view responsável pelo gerenciamento de Notas Fiscais no sistema.
 CREATE VIEW EXPERT_NOTA (
   "ID",
   "CODIGO",
-  "CODFILIAL",
+  "CODFILIALERP",
   "TIPO",
   "CARGA",
   "DATAEMISSAO",
@@ -77,7 +77,7 @@ Exemplo de json:
 {
   "ID": "1234501FORN001S1",
   "CODIGO": "12345",
-  "CODFILIAL": "01",
+  "CODFILIALERP": "01",
   "TIPO": 1,
   "CARGA": "BONUS123",
   "DATAEMISSAO": "2024-10-10",
@@ -101,7 +101,7 @@ Exemplo de json:
 | -------------------- | --------------- | ------------------------------------------------------------------------------------ |
 | **ID**               | `VARCHAR(100)`  | Identificador único da nota fiscal. <br/>🔴 **Obrigatório**.                         |
 | **CODIGO**           | `VARCHAR(30)`   | Código da nota fiscal. <br/>🔴 **Obrigatório**.                                      |
-| **CODFILIAL**        | `VARCHAR(30)`   | Código da filial emissora. <br/>🔴 **Obrigatório**.                                  |
+| **CODFILIALERP**        | `VARCHAR(30)`   | Código da filial emissora. <br/>🔴 **Obrigatório**.                                  |
 | **TIPO**             | `INTEGER`       | Tipo da nota: 1 = padrão, 2 = devolução, 3 = transferência. <br/>🔴 **Obrigatório**. |
 | **CARGA**            | `VARCHAR(20)`   | Código da carga associada. <br/>🔴 **Obrigatório**.                                  |
 | **DATAEMISSAO**      | `DATE`          | Data de emissão da nota fiscal. <br/>🔴 **Obrigatório**.                             |
